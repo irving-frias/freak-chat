@@ -10,7 +10,6 @@ use Drupal\user\Entity\Role;
  * Install, update and uninstall functions for the Freak Chat module.
  */
 function freak_chat_install() {
-  \Drupal::configFactory()->getEditable('node.type.freak_chat_user_profile')->save();
   \Drupal::configFactory()->getEditable('node.type.freak_chat_room')->save();
   \Drupal::configFactory()->getEditable('node.type.freak_chat_message')->save();
   \Drupal::configFactory()->getEditable('node.type.freak_chat_logs')->save();
