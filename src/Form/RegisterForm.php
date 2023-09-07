@@ -6,6 +6,8 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\user\Entity\Role;
+use Drupal\user\Entity\User;
 
 /**
  * Provides a Freak Chat form.
@@ -120,18 +122,28 @@ final class RegisterForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
-    $user = \Drupal\user\Entity\User::create();
+    $user = User::create();
     $user->setUsername($form_state->getValue('name'));
     $user->setEmail($form_state->getValue('email'));
     $user->setPassword($form_state->getValue('password'));
     $user->enforceIsNew();
+    $user->activate();
     $user->save();
+
+    // Assign a role to the user.
+    $role_name = 'freak_chat'; // Replace with the role's machine name.
+    $role = Role::load($role_name);
+
+    if ($role) {
+      $user->addRole($role->id());
+      $user->save();
+    }
 
     // Optionally, log in the user after registration.
     user_login_finalize($user);
 
     // Redirect the user to a different page after registration.
-    $form_state->setRedirect('user.login');
+    $form_state->setRedirect('user.page');
   }
 
   /**
