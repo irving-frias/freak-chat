@@ -18,7 +18,8 @@ function freak_chat_install() {
   \Drupal::configFactory()->getEditable('node.type.freak_chat_friendship')->save();
   \Drupal::configFactory()->getEditable('node.type.freak_chat_user_relationship')->save();
 
-  $role_name = 'freak_chat';
+  $role_machine_name = 'freak_chat';
+  $role_name = 'Freak Chat';
   $permissions = [
     'access content', // Example permission; customize this list as needed.
     'view own unpublished content',
@@ -26,10 +27,10 @@ function freak_chat_install() {
   ];
 
   // Check if the role already exists.
-  if (!\Drupal\user\Entity\Role::load($role_name)) {
+  if (!Role::load($role_machine_name)) {
     // Create the role.
-    $role = \Drupal\user\Entity\Role::create([
-      'id' => $role_name,
+    $role = Role::create([
+      'id' => $role_machine_name,
       'label' => $role_name,
     ]);
     $role->save();

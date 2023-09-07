@@ -6,7 +6,7 @@ dependencies:
     - node
     - system
 id: freak_chat
-label: freak_chat
+label: Freak Chat
 weight: 3
 is_admin: null
 permissions:
