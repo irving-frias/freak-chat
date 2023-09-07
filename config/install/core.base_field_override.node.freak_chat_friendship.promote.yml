@@ -1,0 +1,22 @@
+uuid: 11894ea4-609b-4cf8-be23-6109bbca89c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.freak_chat_friendship
+id: node.freak_chat_friendship.promote
+field_name: promote
+entity_type: node
+bundle: freak_chat_friendship
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

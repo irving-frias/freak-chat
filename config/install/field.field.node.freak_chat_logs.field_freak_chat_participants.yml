@@ -1,0 +1,21 @@
+uuid: 74fd4a5c-235d-4445-90f1-9a7caf6fded5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_participants
+    - node.type.freak_chat_logs
+id: node.freak_chat_logs.field_freak_chat_participants
+field_name: field_freak_chat_participants
+entity_type: node
+bundle: freak_chat_logs
+label: Participants
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

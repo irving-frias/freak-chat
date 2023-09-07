@@ -1,0 +1,39 @@
+uuid: 7a58a842-decb-4235-b569-35b8be9b90af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.freak_chat_logs.field_freak_chat_messages
+    - field.field.node.freak_chat_logs.field_freak_chat_participants
+    - node.type.freak_chat_logs
+  module:
+    - user
+id: node.freak_chat_logs.default
+targetEntityType: node
+bundle: freak_chat_logs
+mode: default
+content:
+  field_freak_chat_messages:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_freak_chat_participants:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

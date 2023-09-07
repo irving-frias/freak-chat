@@ -1,0 +1,11 @@
+uuid: 6e512bfa-c97f-4dbd-a98c-94b21bd9b48f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.freak_chat_friendship
+id: node.freak_chat_friendship
+target_entity_type_id: node
+target_bundle: freak_chat_friendship
+default_langcode: site_default
+language_alterable: false

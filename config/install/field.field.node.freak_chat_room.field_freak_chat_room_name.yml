@@ -1,0 +1,19 @@
+uuid: 87ecfba3-f921-41ad-859b-61f615c5d39d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_room_name
+    - node.type.freak_chat_room
+id: node.freak_chat_room.field_freak_chat_room_name
+field_name: field_freak_chat_room_name
+entity_type: node
+bundle: freak_chat_room
+label: 'Room Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 00f90685-1a3c-4b83-990e-dcc752e73982
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_status_read
+    - node.type.freak_chat_notification
+  module:
+    - options
+id: node.freak_chat_notification.field_freak_chat_status_read
+field_name: field_freak_chat_status_read
+entity_type: node
+bundle: freak_chat_notification
+label: Status
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

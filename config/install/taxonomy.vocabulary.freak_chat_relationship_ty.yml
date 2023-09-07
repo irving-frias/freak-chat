@@ -1,0 +1,8 @@
+uuid: 783780eb-0020-4773-817f-80017aa88043
+langcode: en
+status: true
+dependencies: {  }
+name: 'Relationship Type'
+vid: freak_chat_relationship_ty
+description: ''
+weight: 0

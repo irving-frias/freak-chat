@@ -1,0 +1,22 @@
+uuid: 30908930-1cf4-4548-b79f-9b59a7ad83e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.freak_chat_room
+id: node.freak_chat_room.promote
+field_name: promote
+entity_type: node
+bundle: freak_chat_room
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

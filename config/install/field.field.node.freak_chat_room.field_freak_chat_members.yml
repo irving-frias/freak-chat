@@ -1,0 +1,21 @@
+uuid: 0eccdd01-2b55-4b73-b02c-d4d18cb10b6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_members
+    - node.type.freak_chat_room
+id: node.freak_chat_room.field_freak_chat_members
+field_name: field_freak_chat_members
+entity_type: node
+bundle: freak_chat_room
+label: Members
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

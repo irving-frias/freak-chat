@@ -1,0 +1,48 @@
+uuid: 9e7f522a-897f-4f01-a82c-1b79d373adaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.freak_chat_notification.field_freak_chat_message
+    - field.field.node.freak_chat_notification.field_freak_chat_receiver
+    - field.field.node.freak_chat_notification.field_freak_chat_status_read
+    - node.type.freak_chat_notification
+  module:
+    - options
+    - user
+id: node.freak_chat_notification.default
+targetEntityType: node
+bundle: freak_chat_notification
+mode: default
+content:
+  field_freak_chat_message:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_freak_chat_receiver:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_freak_chat_status_read:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

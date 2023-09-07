@@ -1,0 +1,26 @@
+uuid: 24e2ab1d-fb68-4766-ad1c-bd8b99d59ff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.freak_chat_logs.field_freak_chat_messages
+    - field.field.node.freak_chat_logs.field_freak_chat_participants
+    - node.type.freak_chat_logs
+  module:
+    - user
+id: node.freak_chat_logs.teaser
+targetEntityType: node
+bundle: freak_chat_logs
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_freak_chat_messages: true
+  field_freak_chat_participants: true
+  langcode: true
+  search_api_excerpt: true

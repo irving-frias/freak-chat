@@ -1,0 +1,22 @@
+uuid: 568ffb54-5133-4032-8419-c939221bf404
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.freak_chat_logs
+id: node.freak_chat_logs.promote
+field_name: promote
+entity_type: node
+bundle: freak_chat_logs
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

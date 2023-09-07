@@ -1,0 +1,15 @@
+freak_chat.login:
+  path: '/freak-chat/login'
+  defaults:
+    _title: 'Login'
+    _form: 'Drupal\freak_chat\Form\LoginForm'
+  requirements:
+    _permission: 'access content'
+
+freak_chat.register:
+  path: '/freak-chat/register'
+  defaults:
+    _title: 'Register'
+    _form: 'Drupal\freak_chat\Form\RegisterForm'
+  requirements:
+    _permission: 'access content'

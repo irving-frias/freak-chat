@@ -1,0 +1,5 @@
+name: 'Freak Chat'
+type: module
+description: 'Creates a realtime chat.'
+package: Freak
+core_version_requirement: ^10

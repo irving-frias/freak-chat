@@ -1,0 +1,30 @@
+uuid: 2599120f-1566-4e11-9c15-3a3d4f119696
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.freak_chat_room.field_freak_chat_last_updated
+    - field.field.node.freak_chat_room.field_freak_chat_members
+    - field.field.node.freak_chat_room.field_freak_chat_messages
+    - field.field.node.freak_chat_room.field_freak_chat_room_name
+    - node.type.freak_chat_room
+  module:
+    - user
+id: node.freak_chat_room.teaser
+targetEntityType: node
+bundle: freak_chat_room
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_freak_chat_last_updated: true
+  field_freak_chat_members: true
+  field_freak_chat_messages: true
+  field_freak_chat_room_name: true
+  langcode: true
+  search_api_excerpt: true

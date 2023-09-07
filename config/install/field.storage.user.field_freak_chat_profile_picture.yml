@@ -1,0 +1,20 @@
+uuid: aed72bc1-4903-460b-8e1c-a70c517c3f5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - user
+id: user.field_freak_chat_profile_picture
+field_name: field_freak_chat_profile_picture
+entity_type: user
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

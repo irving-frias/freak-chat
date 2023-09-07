@@ -1,0 +1,14 @@
+{
+    "name": "ifrias/freak_chat",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/irving-frias/freak-chat",
+    "authors": [
+        {
+            "name": "irving-frias",
+            "email": "irvingfrias41@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

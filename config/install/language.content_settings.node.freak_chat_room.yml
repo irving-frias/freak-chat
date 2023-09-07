@@ -1,0 +1,11 @@
+uuid: 8f249b18-4afe-497e-88ae-11b2cdbba0e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.freak_chat_room
+id: node.freak_chat_room
+target_entity_type_id: node
+target_bundle: freak_chat_room
+default_langcode: site_default
+language_alterable: false

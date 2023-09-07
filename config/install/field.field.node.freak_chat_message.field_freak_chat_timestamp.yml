@@ -1,0 +1,19 @@
+uuid: 2d0fabab-f8a7-40e5-8fd4-c98614eff4e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_timestamp
+    - node.type.freak_chat_message
+id: node.freak_chat_message.field_freak_chat_timestamp
+field_name: field_freak_chat_timestamp
+entity_type: node
+bundle: freak_chat_message
+label: Timestamp
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

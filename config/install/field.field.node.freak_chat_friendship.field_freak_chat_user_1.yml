@@ -1,0 +1,21 @@
+uuid: 204e6bfe-9865-49c0-aac2-6f9d42cb8b69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_user_1
+    - node.type.freak_chat_friendship
+id: node.freak_chat_friendship.field_freak_chat_user_1
+field_name: field_freak_chat_user_1
+entity_type: node
+bundle: freak_chat_friendship
+label: 'User 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

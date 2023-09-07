@@ -1,0 +1,11 @@
+uuid: 4b378390-28b5-499e-b283-569e0716baaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.freak_chat_relationship_ty
+id: taxonomy_term.freak_chat_relationship_ty
+target_entity_type_id: taxonomy_term
+target_bundle: freak_chat_relationship_ty
+default_langcode: site_default
+language_alterable: false

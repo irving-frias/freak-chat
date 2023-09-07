@@ -1,0 +1,21 @@
+uuid: 7cf2407b-e7cb-4853-99d3-3db5d3d9c660
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_user_2
+    - node.type.freak_chat_user_relationship
+id: node.freak_chat_user_relationship.field_freak_chat_user_2
+field_name: field_freak_chat_user_2
+entity_type: node
+bundle: freak_chat_user_relationship
+label: 'User 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

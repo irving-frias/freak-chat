@@ -1,0 +1,21 @@
+uuid: 44b03832-c20e-4c58-b143-1839d32c248d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_last_updated
+    - node.type.freak_chat_room
+  module:
+    - datetime
+id: node.freak_chat_room.field_freak_chat_last_updated
+field_name: field_freak_chat_last_updated
+entity_type: node
+bundle: freak_chat_room
+label: 'Last Updated'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

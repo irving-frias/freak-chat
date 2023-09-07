@@ -1,0 +1,11 @@
+uuid: a7336a30-5fb0-462e-a0eb-52d956c1c30e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.freak_chat_notification
+id: node.freak_chat_notification
+target_entity_type_id: node
+target_bundle: freak_chat_notification
+default_langcode: site_default
+language_alterable: false

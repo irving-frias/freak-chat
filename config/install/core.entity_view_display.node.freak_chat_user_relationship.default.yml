@@ -1,0 +1,48 @@
+uuid: c730bd68-8493-4804-9b84-89012d7b811a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.freak_chat_user_relationship.field_freak_chat_relationship_ty
+    - field.field.node.freak_chat_user_relationship.field_freak_chat_user_1
+    - field.field.node.freak_chat_user_relationship.field_freak_chat_user_2
+    - node.type.freak_chat_user_relationship
+  module:
+    - user
+id: node.freak_chat_user_relationship.default
+targetEntityType: node
+bundle: freak_chat_user_relationship
+mode: default
+content:
+  field_freak_chat_relationship_ty:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_freak_chat_user_1:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_freak_chat_user_2:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

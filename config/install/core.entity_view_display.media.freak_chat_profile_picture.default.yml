@@ -1,0 +1,35 @@
+uuid: aae3d23b-390f-4e07-b76c-4a77a7fd9328
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.freak_chat_profile_picture.field_media_image
+    - image.style.large
+    - media.type.freak_chat_profile_picture
+  module:
+    - image
+_core:
+  default_config_hash: wX9zn44tdsr39rZlcpoojxDO9QGf0xlpqmz4NUP1bCs
+id: media.freak_chat_profile_picture.default
+targetEntityType: media
+bundle: freak_chat_profile_picture
+mode: default
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

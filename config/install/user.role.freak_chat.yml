@@ -1,0 +1,14 @@
+uuid: 5c6709f0-d1ff-42a7-a080-cc5118fcba30
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+id: freak_chat
+label: freak_chat
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'
+  - 'view own unpublished content'

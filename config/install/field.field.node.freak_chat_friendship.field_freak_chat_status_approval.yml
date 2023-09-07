@@ -1,0 +1,21 @@
+uuid: 5151142c-ade2-4d08-964d-b73e85f487c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_status_approval
+    - node.type.freak_chat_friendship
+  module:
+    - options
+id: node.freak_chat_friendship.field_freak_chat_status_approval
+field_name: field_freak_chat_status_approval
+entity_type: node
+bundle: freak_chat_friendship
+label: Status
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

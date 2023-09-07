@@ -1,0 +1,29 @@
+uuid: 29a3181c-6457-4053-a0c2-6d07dda3b3a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_messages
+    - node.type.freak_chat_logs
+    - node.type.freak_chat_message
+id: node.freak_chat_logs.field_freak_chat_messages
+field_name: field_freak_chat_messages
+entity_type: node
+bundle: freak_chat_logs
+label: Messages
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      freak_chat_message: freak_chat_message
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: f58ee56a-51c2-4ead-a250-30712d4dcdef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.freak_chat_logs
+id: node.freak_chat_logs
+target_entity_type_id: node
+target_bundle: freak_chat_logs
+default_langcode: site_default
+language_alterable: false

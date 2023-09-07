@@ -1,0 +1,21 @@
+uuid: f5c70c66-5d2d-4350-93bf-fa5ac2428d12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_receiver
+    - node.type.freak_chat_notification
+id: node.freak_chat_notification.field_freak_chat_receiver
+field_name: field_freak_chat_receiver
+entity_type: node
+bundle: freak_chat_notification
+label: Receiver
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

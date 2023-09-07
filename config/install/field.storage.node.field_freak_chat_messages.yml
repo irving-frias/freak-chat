@@ -1,0 +1,19 @@
+uuid: 310096ef-5bb6-4464-9f33-3b8d6ba1b163
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_freak_chat_messages
+field_name: field_freak_chat_messages
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

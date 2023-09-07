@@ -1,0 +1,27 @@
+uuid: 139469a2-9fe2-4384-94f8-e44186dfe6dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_freak_chat_status_read
+field_name: field_freak_chat_status_read
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: read
+      label: Read
+    -
+      value: unread
+      label: Unread
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

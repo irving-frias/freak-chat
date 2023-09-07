@@ -1,0 +1,115 @@
+<?php
+
+use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\node\Entity\NodeType;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\user\Entity\Role;
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Freak Chat module.
+ */
+function freak_chat_install() {
+  \Drupal::configFactory()->getEditable('node.type.freak_chat_user_profile')->save();
+  \Drupal::configFactory()->getEditable('node.type.freak_chat_room')->save();
+  \Drupal::configFactory()->getEditable('node.type.freak_chat_message')->save();
+  \Drupal::configFactory()->getEditable('node.type.freak_chat_logs')->save();
+  \Drupal::configFactory()->getEditable('node.type.freak_chat_notification')->save();
+  \Drupal::configFactory()->getEditable('node.type.freak_chat_friendship')->save();
+  \Drupal::configFactory()->getEditable('node.type.freak_chat_user_relationship')->save();
+
+  $role_name = 'freak_chat';
+  $permissions = [
+    'access content', // Example permission; customize this list as needed.
+    'view own unpublished content',
+    // Add more permissions as needed.
+  ];
+
+  // Check if the role already exists.
+  if (!\Drupal\user\Entity\Role::load($role_name)) {
+    // Create the role.
+    $role = \Drupal\user\Entity\Role::create([
+      'id' => $role_name,
+      'label' => $role_name,
+    ]);
+    $role->save();
+
+    // Assign permissions to the role.
+    user_role_grant_permissions($role_name, $permissions);
+  }
+}
+
+function freak_chat_uninstall() {
+  $content_types = [
+    'freak_chat_user_profile',
+    'freak_chat_room',
+    'freak_chat_message',
+    'freak_chat_logs',
+    'freak_chat_notification',
+    'freak_chat_friendship',
+    'freak_chat_user_relationship',
+  ];
+
+   foreach ($content_types as $type) {
+     $content_type = NodeType::load($type);
+
+     // Check if the content type exists.
+    if ($content_type) {
+      // Delete the content type.
+      $content_type->delete();
+    }
+   }
+
+  $media_types = [
+    'freak_chat_profile_picture'
+  ];
+
+  foreach ($media_types as $type) {
+    $media_type = \Drupal::entityTypeManager()
+      ->getStorage('media_type')
+      ->load($type);
+
+    // Check if the media type exists.
+    if ($media_type) {
+      // Delete the media type.
+      $media_type->delete();
+    }
+  }
+
+  // Replace 'your_vocabulary_name' with the machine name of the taxonomy vocabulary you want to delete.
+  $vocabularies = [
+    'freak_chat_relationship_ty'
+  ];
+
+  foreach ($vocabularies as $type) {
+    if (Vocabulary::load($type)) {
+      // Delete the taxonomy vocabulary configuration.
+      Vocabulary::load($type)->delete();
+    }
+  }
+
+  $user_fields = [
+    'field_freak_chat_about',
+    'field_freak_chat_contact_phone',
+    'field_freak_chat_profile_picture',
+    'field_freak_chat_status'
+  ];
+
+  foreach ($user_fields as $field_name) {
+    $field_storage = FieldStorageConfig::loadByName('user', $field_name);
+    if ($field_storage) {
+      // Delete the field storage (the actual database table).
+      $field_storage->delete();
+    }
+  }
+
+  $roles = [
+    'freak_chat'
+  ];
+
+  foreach ($roles as $role) {
+    if ($role_entity = Role::load($role)) {
+      $role_entity->delete();
+    }
+  }
+}

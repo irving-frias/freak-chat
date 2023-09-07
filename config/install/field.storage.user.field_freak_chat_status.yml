@@ -1,0 +1,27 @@
+uuid: b27cd3dd-9a4c-4f13-a5c0-02b94a12ec35
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_freak_chat_status
+field_name: field_freak_chat_status
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: online
+      label: Online
+    -
+      value: offline
+      label: Offline
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

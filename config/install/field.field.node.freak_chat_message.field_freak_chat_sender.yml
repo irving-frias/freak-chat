@@ -1,0 +1,21 @@
+uuid: 43212c07-51d7-41a4-92e4-b8ece3590d0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_sender
+    - node.type.freak_chat_message
+id: node.freak_chat_message.field_freak_chat_sender
+field_name: field_freak_chat_sender
+entity_type: node
+bundle: freak_chat_message
+label: Sender
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

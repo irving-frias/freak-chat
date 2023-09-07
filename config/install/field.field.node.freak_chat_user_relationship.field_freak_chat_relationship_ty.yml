@@ -1,0 +1,21 @@
+uuid: 8d08b1f2-2891-4b42-8b5b-092064e66058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_relationship_ty
+    - node.type.freak_chat_user_relationship
+id: node.freak_chat_user_relationship.field_freak_chat_relationship_ty
+field_name: field_freak_chat_relationship_ty
+entity_type: node
+bundle: freak_chat_user_relationship
+label: 'Relationship Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

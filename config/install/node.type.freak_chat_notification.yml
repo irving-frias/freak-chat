@@ -1,0 +1,18 @@
+uuid: 8e348e5d-859f-4e50-baac-c505cef1c210
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Notification
+type: freak_chat_notification
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

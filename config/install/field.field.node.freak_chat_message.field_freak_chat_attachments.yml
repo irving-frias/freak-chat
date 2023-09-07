@@ -1,0 +1,27 @@
+uuid: fc6c4315-d754-451c-97eb-136f08bef0c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freak_chat_attachments
+    - node.type.freak_chat_message
+  module:
+    - file
+id: node.freak_chat_message.field_freak_chat_attachments
+field_name: field_freak_chat_attachments
+entity_type: node
+bundle: freak_chat_message
+label: Attachments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'attachments/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt jpg jpeg png gif svg json csv xls'
+  max_filesize: '50 MB'
+  description_field: true
+field_type: file

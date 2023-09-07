@@ -1,0 +1,28 @@
+uuid: 5db2285f-4012-4ace-befe-f61ced88b2c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.freak_chat_friendship.field_freak_chat_status_approval
+    - field.field.node.freak_chat_friendship.field_freak_chat_user_1
+    - field.field.node.freak_chat_friendship.field_freak_chat_user_2
+    - node.type.freak_chat_friendship
+  module:
+    - user
+id: node.freak_chat_friendship.teaser
+targetEntityType: node
+bundle: freak_chat_friendship
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_freak_chat_status_approval: true
+  field_freak_chat_user_1: true
+  field_freak_chat_user_2: true
+  langcode: true
+  search_api_excerpt: true
