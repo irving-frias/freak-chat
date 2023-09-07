@@ -41,7 +41,6 @@ function freak_chat_install() {
 
 function freak_chat_uninstall() {
   $content_types = [
-    'freak_chat_user_profile',
     'freak_chat_room',
     'freak_chat_message',
     'freak_chat_logs',
