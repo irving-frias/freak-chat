@@ -1,5 +1,5 @@
 freak_chat.register:
-  path: '/freak-chat/register'
+  path: '/register'
   defaults:
     _title: 'Register'
     _form: 'Drupal\freak_chat\Form\RegisterForm'
