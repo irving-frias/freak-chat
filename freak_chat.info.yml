@@ -14,3 +14,4 @@ dependencies:
   - drupal:image
   - drupal:menu_ui
   - drupal:language
+  - drupal:action
