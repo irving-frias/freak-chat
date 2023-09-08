@@ -5,6 +5,7 @@ package: Freak
 core_version_requirement: ^10
 dependencies:
   - drupal:media
+  - drupal:media_library
   - drupal:taxonomy
   - drupal:file
   - drupal:path
@@ -12,3 +13,4 @@ dependencies:
   - drupal:options
   - drupal:image
   - drupal:menu_ui
+  - drupal:language
