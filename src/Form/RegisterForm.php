@@ -6,22 +6,28 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Session\AccountInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Drupal\user\Entity\Role;
 use Drupal\user\Entity\User;
+use Drupal\Core\Url; // Add this use statement
 
 /**
  * Provides a Freak Chat form.
  */
 final class RegisterForm extends FormBase {
   protected $entityTypeManager;
+  protected $currentUser;
 
-  public function __construct(EntityTypeManagerInterface $entityTypeManager) {
+  public function __construct(EntityTypeManagerInterface $entityTypeManager, AccountInterface $current_user) {
     $this->entityTypeManager = $entityTypeManager;
+    $this->currentUser = $current_user;
   }
 
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('current_user')
     );
   }
 
@@ -36,6 +42,14 @@ final class RegisterForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
+
+    if ($this->currentUser->isAuthenticated()) {
+      // If the user is logged in, redirect to the user page.
+
+      $url = Url::fromRoute('user.page'); // Replace with the route name you want to redirect to.
+      $form_state->setResponse(new RedirectResponse($url->toString()));
+      return $form;
+    }
 
     $form['username'] = [
       '#type' => 'textfield',

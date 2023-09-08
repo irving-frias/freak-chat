@@ -5,3 +5,11 @@ freak_chat.register:
     _form: 'Drupal\freak_chat\Form\RegisterForm'
   requirements:
     _permission: 'access content'
+
+freak_chat.invite_user:
+  path: '/invite-user'
+  defaults:
+    _title: 'Invite User'
+    _form: 'Drupal\freak_chat\Form\InviteUser'
+  requirements:
+    _permission: 'access content'
