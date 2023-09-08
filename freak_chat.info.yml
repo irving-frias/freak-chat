@@ -4,7 +4,6 @@ description: 'Creates a realtime chat.'
 package: Freak
 core_version_requirement: ^10
 dependencies:
-  - drupal:core
   - drupal:media
   - drupal:taxonomy
   - drupal:file
