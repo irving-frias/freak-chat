@@ -1,0 +1,13 @@
+freak_chat:
+  title: 'Freak Chat'
+  route_name: freak_chat
+  parent: system.admin
+  description: 'Freak Chat'
+  weight: 1
+
+freak_chat.invite_user:
+  title: 'Invite User'
+  route_name: freak_chat.invite_user
+  parent: freak_chat
+  description: 'Invite User'
+  weight: 2

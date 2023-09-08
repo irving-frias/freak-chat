@@ -1,0 +1,7 @@
+block.settings.freak_chat_friend_list:
+  type: block_settings
+  label: 'Friend List block'
+  mapping:
+    example:
+      type: string
+      label: Example
